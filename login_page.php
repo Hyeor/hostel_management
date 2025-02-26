@@ -8,13 +8,13 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { display: flex; height: 100vh; justify-content: center; align-items: center; background-color: #f8f8f8; }
-        .container { display: flex; width: 900px; background: #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; }
+        .container { display: flex; width: 900px; background: #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; animation: fadeIn 1s ease-in-out; }
         .left { width: 50%; background: url('https://source.unsplash.com/600x600/?home,interior') no-repeat center center/cover; }
         .right { width: 50%; padding: 40px; }
         .right h2 { font-size: 28px; font-weight: 600; margin-bottom: 10px; }
         .right p { font-size: 14px; color: gray; margin-bottom: 20px; }
         .input-box { width: 100%; margin-bottom: 15px; position: relative; }
-        .input-box input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; outline: none; }
+        .input-box input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; outline: none; transition: border-color 0.3s; }
         .input-box input.valid { border-color: green; }
         .input-box input.invalid { border-color: red; }
         .message { font-size: 12px; margin-top: 5px; display: none; }
@@ -23,9 +23,16 @@
         .checkbox { display: flex; align-items: center; font-size: 14px; margin-bottom: 15px; }
         .checkbox input { margin-right: 8px; }
         .forgot { color: #6c5ce7; text-decoration: none; margin-left: auto; }
-        .btn { width: 100%; background: #6c5ce7; color: #fff; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
-        .social-icons { display: flex; gap: 10px;}
-        .social-icons img {width: 40px; cursor: pointer;}
+        .btn { width: 100%; background: #6c5ce7; color: #fff; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s; }
+        .btn:hover { background-color: #5b4dbf; }
+        .social-icons { display: flex; gap: 10px; margin-top: 20px; }
+        .social-icons img { width: 40px; cursor: pointer; transition: transform 0.3s; }
+        .social-icons img:hover { transform: scale(1.1); }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -49,12 +56,12 @@
                     <a href="#" class="forgot">Forget password?</a>
                 </div>
                 <button type="submit" class="btn">Log in</button>
-            <div class="social-icons">
-                <img src="logo/gg_icon.png" alt="Google">
-                <img src="logo/facebook_icon.png" alt="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                <img src="logo/X_icon.jpg" alt="Twitter">
-            </div>
+                <div class="social-icons">
+                    <img src="logo/gg_icon.png" alt="Google">
+                    <img src="logo/facebook_icon.png" alt="Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    <img src="logo/X_icon.jpg" alt="Twitter">
+                </div>
             </form>
         </div>
     </div>
