@@ -52,7 +52,7 @@
                 </div>
                 <div class="checkbox">
                     <input type="checkbox" id="keep-logged-in">
-                    <label for="keep-logged-in">Keep me logged in</label>
+                    <label for="keep-logged-in">Keep me logged i</label>
                     <a href="#" class="forgot">Forget password?</a>
                 </div>
                 <button type="submit" class="btn">Log in</button>
